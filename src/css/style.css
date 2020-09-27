@@ -1,0 +1,187 @@
+body {
+    background: linear-gradient( #bbb, transparent 1px), linear-gradient( 90deg, #bbb, transparent 1px);
+    background-size: 15px 15px;
+    background-position: center center;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif, "Arial";
+    font-style: normal;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+    margin: 100px auto;
+    position: relative;
+}
+
+.hidden {
+    display: none;
+}
+
+.header-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.products-table {
+    box-sizing: border-box;
+    border: 1px solid #000;
+    padding: 10px;
+    width: 450px;
+    text-align: left;
+    background-color: #fff;
+
+}
+
+th {
+    padding-bottom: 15px;
+}
+
+td {
+    padding: 10px 0;
+}
+
+.product-actions {
+    display: flex;
+    flex-direction: row;
+}
+
+.fa-pencil-alt {
+    margin-right: 30px;
+}
+
+.fa-plus:hover, .fa-pencil-alt:hover {
+    color: cornflowerblue;
+}
+
+.fa-times:hover {
+    color: crimson;
+}
+
+/*form*/
+
+.editor-form, .create-form, .modal-window {
+    width: 430px;
+    background-color: #fff;
+    border: 1px solid #000;
+    padding: 20px;
+    box-sizing: border-box;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.name-container, .cost-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.create-form-input-name, .create-form-input-cost, .editor-form-input-name, .editor-form-input-cost {
+    border: 1px solid #000;
+    border-radius: 22px;
+    padding: 8px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    outline:none;
+    position: relative;
+}
+
+.create-form-input-name:focus, .create-form-input-cost:focus, .editor-form-input-name:focus, .editor-form-input-cost:focus {
+    border-color: cornflowerblue;
+}
+
+.btn-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.btn {
+    width: 150px;
+    border: 1px solid #000;
+    border-radius: 22px;
+    padding: 10px;
+    background-color: #fff;
+    text-align: center;
+    font-size: 16px;
+}
+
+.create-form-btn_cancel, .editor-form-btn_cancel, .btn_modal-cancel {
+    margin-left: 20px;
+}
+
+
+.create-form-btn_cancel:hover, .create-form-btn_cancel:focus, .editor-form-btn_cancel:focus, .btn_modal-cancel:hover, .btn_modal-cancel:focus {
+    border-color: crimson;
+    color: crimson;
+}
+
+.create-form-btn_save:hover, .editor-form-btn_save:hover, .editor-form-btn_cancel:hover, .btn_delete:hover {
+    border-color: cornflowerblue;
+    color: cornflowerblue;
+}
+
+.create-form-btn_save:focus, .editor-form-btn_save:focus, .btn_delete:focus, .create-form-btn_cancel:focus, .editor-form-btn_cancel:focus, .btn_modal-cancel:focus {
+    outline: none;
+}
+
+.field ~ span {
+    display: none;
+    border: 1px solid crimson;
+    border-radius: 4px;
+    padding: 4px;
+    background: white;
+    position: absolute;
+    box-sizing: border-box;
+}
+
+.create-form-input-name ~ span, .editor-form-input-name ~ span {
+    top: 90px;
+    left: 130px;
+
+
+}
+
+.create-form-input-cost ~ span, .editor-form-input-cost ~ span {
+    top: 171px;
+    left: 130px;
+
+}
+
+.create-form-input-name ~ span::before, .create-form-input-cost ~ span::before, .editor-form-input-name ~ span::before, .editor-form-input-cost ~ span::before {
+    content: "";
+    position: absolute;
+    border: 10px solid transparent;
+    border-bottom-color: crimson;
+    top: -20px;
+    left: calc(50% - 10px);
+    box-sizing: border-box;
+}
+
+.create-form-input-name ~ span::after, .create-form-input-cost ~ span::after, .editor-form-input-name ~ span::after, .editor-form-input-cost ~ span::after {
+    content: "";
+    position: absolute;
+    border: 10px solid transparent;
+    border-bottom: 10px solid #fff;
+    top: -19px;
+    left: calc(50% - 10px);
+    box-sizing: border-box;
+}
+
+.create-form-input-name.error ~ span, .editor-form-input-name.error ~ span, .create-form-input-cost.error ~ span, .editor-form-input-cost.error ~ span {
+    display: block;
+}
+
+
